@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Compétences</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .nav-link:hover { color: #FBBF24; transition: color 0.3s ease; }
+    .skill-card:hover { transform: scale(1.1); transition: transform 0.3s ease; }
+    .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-800 shadow-lg z-10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-amber-400">Mon Portfolio</a>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="nav-link text-lg">Accueil</a></li>
+        <li><a href="projets.html" class="nav-link text-lg">Projets</a></li>
+        <li><a href="competences.html" class="nav-link text-lg">Compétences</a></li>
+        <li><a href="apropos.html" class="nav-link text-lg">À propos</a></li>
+        <li><a href="contact.html" class="nav-link text-lg">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Compétences Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Mes Compétences</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">Python</p>
+        </div>
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">Bootstrap</p>
+        </div>
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React JS" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">React JS</p>
+        </div>
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">CSS</p>
+        </div>
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Design" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">Design</p>
+        </div>
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">Django</p>
+        </div>
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">JavaScript</p>
+        </div>
+        <div class="skill-card text-center fade-in">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-16 h-16 mx-auto mb-4">
+          <p class="text-lg font-semibold">Flutter</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <p>© 2025 ADOH EFFOSSOU ANGE CHRIST. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Animation au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.style.animationDelay = `${Math.random() * 0.5}s`;
+      });
+    });
+  </script>
+</body>
+</html>

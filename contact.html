@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .nav-link:hover { color: #FBBF24; transition: color 0.3s ease; }
+    .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-800 shadow-lg z-10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-amber-400">Mon Portfolio</a>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="nav-link text-lg">Accueil</a></li>
+        <li><a href="projets.html" class="nav-link text-lg">Projets</a></li>
+        <li><a href="competences.html" class="nav-link text-lg">Compétences</a></li>
+        <li><a href="apropos.html" class="nav-link text-lg">À propos</a></li>
+        <li><a href="contact.html" class="nav-link text-lg">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Me contacter</h2>
+      <div class="text-center fade-in">
+        <p class="text-lg mb-4">Envie de collaborer ou de discuter d'un projet ? Contactez-moi !</p>
+        <p class="text-lg mb-4">Email : <a href=" christhebreu@gmail.com" class="text-amber-400 hover:underline">votre.email@example.com</a></p>
+        <p class="text-lg mb-4">Téléphone : <span class="text-amber-400">+225 0768500697</span></p>
+        <p class="text-lg mb-4">LinkedIn : <a href="https://linkedin.com/in/votreprofil" class="text-amber-400 hover:underline">linkedin.com/in/votreprofil</a></p>
+        <a href="mailto:votre.email@example.com" class="bg-amber-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-amber-300 transition mt-6 inline-block">Envoyer un message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <p>© 2025 ADOH EFFOSSOU ANGE CHRIST. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Animation au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.style.animationDelay = `${Math.random() * 0.5}s`;
+      });
+    });
+  </script>
+</body>
+</html>

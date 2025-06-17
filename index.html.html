@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Accueil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .nav-link:hover { color: #FBBF24; transition: color 0.3s ease; }
+    .hero-img { 
+      background-image: url('images/christ.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+    }
+    .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-800 shadow-lg z-10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-amber-400">Mon Portfolio</a>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="nav-link text-lg">Accueil</a></li>
+        <li><a href="projets.html" class="nav-link text-lg">Projets</a></li>
+        <li><a href="competences.html" class="nav-link text-lg">Compétences</a></li>
+        <li><a href="apropos.html" class="nav-link text-lg">À propos</a></li>
+        <li><a href="contact.html" class="nav-link text-lg">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 to-blue-900">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center fade-in">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Bonjour, je suis ADOH EFFOSSOU ANGE CHRIST</h1>
+        <p class="text-lg md:text-xl mb-6">Développeur & Designer passionné, créant des expériences numériques uniques.</p>
+        <a href="projets.html" class="bg-amber-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-amber-300 transition">Voir mes projets</a>
+      </div>
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <div class="hero-img w-64 h-64 md:w-80 md:h-80 rounded-full mx-auto border-4 border-amber-400"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <p>© 2025 ADOH EFFOSSOU ANGE CHRIST. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Animation au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.style.animationDelay = `${Math.random() * 0.5}s`;
+      });
+    });
+  </script>
+</body>
+</html>
